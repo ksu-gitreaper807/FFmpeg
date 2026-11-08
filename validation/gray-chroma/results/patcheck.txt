@@ -1,0 +1,8 @@
+patCHeck 1e10.0
+This tool is intended to help a human check/review patches. It is very far from
+being free of false positives and negatives, and its output are just hints of what
+may or may not be bad. When you use it and it misses something or detects
+something wrong, fix it and send a patch to the ffmpeg-devel mailing list.
+License: GPL, Author: Michael Niedermayer
+
+Missing changelog entry (ignore if minor change)

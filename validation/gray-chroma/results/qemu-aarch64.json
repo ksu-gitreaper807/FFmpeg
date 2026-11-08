@@ -1,0 +1,94 @@
+{
+  "target": "aarch64",
+  "settings": {
+    "arch": "aarch64",
+    "cpu": "cortex-a72",
+    "prefix": "aarch64-linux-gnu-",
+    "qemu": [
+      "qemu-aarch64",
+      "-cpu",
+      "cortex-a72",
+      "-L",
+      "/usr/aarch64-linux-gnu"
+    ],
+    "endian": "little"
+  },
+  "base_commit": "7afbfcbd92d6a73686a86416c1ade94bfc670d07",
+  "builds": {
+    "baseline": {
+      "big_endian": false,
+      "config_sha256": "92c251eaa10784b731ce0f89774405205b5442a13485428d35d09303390f279a",
+      "runtime_target_info": "pointer_bits=64 endian=little cpu_flags=663648",
+      "simd_capability": "NEON",
+      "validate_rgb0_elf": "/portable/build-aarch64/baseline/validate_rgb0: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=b9824c6add69691b541865fbd4aa3fd6b6f35c57, for GNU/Linux 3.7.0, with debug_info, not stripped",
+      "validate_frames_elf": "/portable/build-aarch64/baseline/validate_frames: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=b08b8271370b46c802a74f9c0e0f7e841fe5b416, for GNU/Linux 3.7.0, with debug_info, not stripped",
+      "native": {
+        "sha256": "d3b7dae6ee13963fdb94ae88ff0ec3d112efb1ee3303a8280e15d24278e3937b",
+        "bytes": 4117152
+      },
+      "scalar": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152
+      },
+      "frames": {
+        "sha256": "cc6ddf114332cb191867d573ea5788db0404d9f7d68e28c34df36742e75d0840",
+        "bytes": 270452
+      },
+      "fate": "pass"
+    },
+    "patched": {
+      "big_endian": false,
+      "config_sha256": "92c251eaa10784b731ce0f89774405205b5442a13485428d35d09303390f279a",
+      "runtime_target_info": "pointer_bits=64 endian=little cpu_flags=663648",
+      "simd_capability": "NEON",
+      "validate_rgb0_elf": "/portable/build-aarch64/patched/validate_rgb0: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=8098e077ccead6a394b86df8e98f77887d64edb4, for GNU/Linux 3.7.0, with debug_info, not stripped",
+      "validate_frames_elf": "/portable/build-aarch64/patched/validate_frames: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=2489c2b1a69b732fdb6b3659e1ffc6fabfe334ab, for GNU/Linux 3.7.0, with debug_info, not stripped",
+      "native": {
+        "sha256": "d3b7dae6ee13963fdb94ae88ff0ec3d112efb1ee3303a8280e15d24278e3937b",
+        "bytes": 4117152
+      },
+      "scalar": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152
+      },
+      "frames": {
+        "sha256": "cc6ddf114332cb191867d573ea5788db0404d9f7d68e28c34df36742e75d0840",
+        "bytes": 270452
+      },
+      "fate": "pass"
+    }
+  },
+  "comparisons": {
+    "native": "byte-identical",
+    "scalar": "byte-identical",
+    "frames": "byte-identical"
+  },
+  "configure_options": [
+    "--disable-everything",
+    "--disable-programs",
+    "--disable-doc",
+    "--disable-network",
+    "--disable-autodetect",
+    "--enable-swscale",
+    "--enable-avutil",
+    "--disable-avcodec",
+    "--disable-avformat",
+    "--disable-avfilter",
+    "--disable-avdevice",
+    "--disable-swresample",
+    "--enable-cross-compile",
+    "--target-os=linux",
+    "--arch=aarch64",
+    "--cpu=cortex-a72",
+    "--cross-prefix=aarch64-linux-gnu-",
+    "--target-exec=qemu-aarch64 -cpu cortex-a72 -L /usr/aarch64-linux-gnu"
+  ],
+  "compiler": "aarch64-linux-gnu-gcc (Debian 12.2.0-14) 12.2.0",
+  "emulator": "qemu-aarch64 version 7.2.22 (Debian 1:7.2+dfsg-7+deb12u18+b3)",
+  "uv_converter_calls": {
+    "baseline": 18,
+    "patched": 0
+  },
+  "build_method": "Same configured build tree, baseline libraries/binaries saved, then only slice.c replaced and rebuilt; config.h identical.",
+  "status": "pass"
+}

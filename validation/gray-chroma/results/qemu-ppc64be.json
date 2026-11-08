@@ -1,0 +1,94 @@
+{
+  "target": "ppc64be",
+  "settings": {
+    "arch": "ppc64",
+    "cpu": "power8",
+    "prefix": "powerpc64-linux-gnu-",
+    "qemu": [
+      "qemu-ppc64",
+      "-cpu",
+      "power8",
+      "-L",
+      "/usr/powerpc64-linux-gnu"
+    ],
+    "endian": "big"
+  },
+  "base_commit": "7afbfcbd92d6a73686a86416c1ade94bfc670d07",
+  "builds": {
+    "baseline": {
+      "big_endian": true,
+      "config_sha256": "09806502b7e8a6f128ad8f6e988f54164140ad15c39cb3163908a08b7216ebda",
+      "runtime_target_info": "pointer_bits=64 endian=big cpu_flags=7",
+      "simd_capability": "AltiVec",
+      "validate_rgb0_elf": "/portable/build-ppc64be/baseline/validate_rgb0: ELF 64-bit MSB pie executable, 64-bit PowerPC or cisco 7500, Power ELF V1 ABI, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.1, BuildID[sha1]=27afebb10581171dc5cceb670c5ad3e74f6acb8f, for GNU/Linux 3.2.0, with debug_info, not stripped",
+      "validate_frames_elf": "/portable/build-ppc64be/baseline/validate_frames: ELF 64-bit MSB pie executable, 64-bit PowerPC or cisco 7500, Power ELF V1 ABI, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.1, BuildID[sha1]=4778d18ffdc235fa64902b70ac2f2b63d237b660, for GNU/Linux 3.2.0, with debug_info, not stripped",
+      "native": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152
+      },
+      "scalar": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152
+      },
+      "frames": {
+        "sha256": "12baa62766e95c0f31912cb7ef20cdebda772b6f3fb8d639e7ea7d5b3dea475a",
+        "bytes": 270452
+      },
+      "fate": "pass"
+    },
+    "patched": {
+      "big_endian": true,
+      "config_sha256": "09806502b7e8a6f128ad8f6e988f54164140ad15c39cb3163908a08b7216ebda",
+      "runtime_target_info": "pointer_bits=64 endian=big cpu_flags=7",
+      "simd_capability": "AltiVec",
+      "validate_rgb0_elf": "/portable/build-ppc64be/patched/validate_rgb0: ELF 64-bit MSB pie executable, 64-bit PowerPC or cisco 7500, Power ELF V1 ABI, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.1, BuildID[sha1]=14b7663c5b23e24a0650c66d36119cc236929bcd, for GNU/Linux 3.2.0, with debug_info, not stripped",
+      "validate_frames_elf": "/portable/build-ppc64be/patched/validate_frames: ELF 64-bit MSB pie executable, 64-bit PowerPC or cisco 7500, Power ELF V1 ABI, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.1, BuildID[sha1]=694044b4d35629c79ef00158f6abd23acd5669d0, for GNU/Linux 3.2.0, with debug_info, not stripped",
+      "native": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152
+      },
+      "scalar": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152
+      },
+      "frames": {
+        "sha256": "12baa62766e95c0f31912cb7ef20cdebda772b6f3fb8d639e7ea7d5b3dea475a",
+        "bytes": 270452
+      },
+      "fate": "pass"
+    }
+  },
+  "comparisons": {
+    "native": "byte-identical",
+    "scalar": "byte-identical",
+    "frames": "byte-identical"
+  },
+  "configure_options": [
+    "--disable-everything",
+    "--disable-programs",
+    "--disable-doc",
+    "--disable-network",
+    "--disable-autodetect",
+    "--enable-swscale",
+    "--enable-avutil",
+    "--disable-avcodec",
+    "--disable-avformat",
+    "--disable-avfilter",
+    "--disable-avdevice",
+    "--disable-swresample",
+    "--enable-cross-compile",
+    "--target-os=linux",
+    "--arch=ppc64",
+    "--cpu=power8",
+    "--cross-prefix=powerpc64-linux-gnu-",
+    "--target-exec=qemu-ppc64 -cpu power8 -L /usr/powerpc64-linux-gnu"
+  ],
+  "compiler": "powerpc64-linux-gnu-gcc (Debian 12.2.0-13) 12.2.0",
+  "emulator": "qemu-ppc64 version 7.2.22 (Debian 1:7.2+dfsg-7+deb12u18+b3)",
+  "uv_converter_calls": {
+    "baseline": 18,
+    "patched": 0
+  },
+  "build_method": "Same configured build tree, baseline libraries/binaries saved, then only slice.c replaced and rebuilt; config.h identical.",
+  "status": "pass"
+}

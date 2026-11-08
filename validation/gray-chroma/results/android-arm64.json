@@ -1,0 +1,77 @@
+{
+  "status": "pass",
+  "base_commit": "7afbfcbd92d6a73686a86416c1ade94bfc670d07",
+  "compiler_target": "aarch64-unknown-linux-android24",
+  "compiler": "clang version 21.1.8",
+  "machine": "aarch64",
+  "builds": {
+    "baseline": {
+      "config_sha256": "2264a658dffee99b44c902b24776caf427f72554df223b29b787e8c3ca1eae28",
+      "runtime": "bits=64 endian=little cpu_flags=663904",
+      "native": {
+        "sha256": "d3b7dae6ee13963fdb94ae88ff0ec3d112efb1ee3303a8280e15d24278e3937b",
+        "bytes": 4117152,
+        "uv_calls": 18
+      },
+      "scalar": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152,
+        "uv_calls": 18
+      },
+      "frames": {
+        "sha256": "cc6ddf114332cb191867d573ea5788db0404d9f7d68e28c34df36742e75d0840",
+        "bytes": 270452
+      },
+      "fate": "pass"
+    },
+    "patched": {
+      "config_sha256": "2264a658dffee99b44c902b24776caf427f72554df223b29b787e8c3ca1eae28",
+      "runtime": "bits=64 endian=little cpu_flags=663904",
+      "native": {
+        "sha256": "d3b7dae6ee13963fdb94ae88ff0ec3d112efb1ee3303a8280e15d24278e3937b",
+        "bytes": 4117152,
+        "uv_calls": 0
+      },
+      "scalar": {
+        "sha256": "23c67f7e94335c661c49b33863f6f5e2c3c7bf16a78dee6a5b527ed3532a5257",
+        "bytes": 4117152,
+        "uv_calls": 0
+      },
+      "frames": {
+        "sha256": "cc6ddf114332cb191867d573ea5788db0404d9f7d68e28c34df36742e75d0840",
+        "bytes": 270452
+      },
+      "fate": "pass"
+    }
+  },
+  "comparisons": {
+    "native": "byte-identical",
+    "scalar": "byte-identical",
+    "frames": "byte-identical"
+  },
+  "jobs": 2,
+  "ro.product.model": "SM-G781B",
+  "ro.build.version.release": "13",
+  "configure_options": [
+    "--disable-everything",
+    "--disable-programs",
+    "--disable-doc",
+    "--disable-network",
+    "--disable-autodetect",
+    "--enable-swscale",
+    "--enable-avutil",
+    "--disable-avcodec",
+    "--disable-avformat",
+    "--disable-avfilter",
+    "--disable-avdevice",
+    "--disable-swresample",
+    "--target-os=android",
+    "--arch=aarch64",
+    "--cc=clang",
+    "--host-cc=clang",
+    "--ar=llvm-ar",
+    "--nm=llvm-nm",
+    "--ranlib=llvm-ranlib",
+    "--strip=llvm-strip"
+  ]
+}

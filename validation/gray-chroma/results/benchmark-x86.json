@@ -1,0 +1,489 @@
+{
+  "cpu": "Intel Core i7-12800H",
+  "affinity_cpu": 2,
+  "method": "7 alternating baseline/patched runs; each case 5 warmup + 60 timed frames; SWS_BILINEAR; BT.709; limited output range; native CPU dispatch; single thread",
+  "runs": [
+    {
+      "trial": 0,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 7.014
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.646
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 30.111
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 57.724
+        }
+      ]
+    },
+    {
+      "trial": 0,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 5.191
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.426
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 23.816
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 57.378
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 8.293
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 15.863
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 25.42
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 62.841
+        }
+      ]
+    },
+    {
+      "trial": 1,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 6.767
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.088
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 29.041
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 56.641
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 6.846
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.02
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 35.671
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 57.374
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 5.679
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.167
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 24.395
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 58.286
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 5.707
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 13.679
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 24.269
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 58.206
+        }
+      ]
+    },
+    {
+      "trial": 3,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 7.892
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 15.55
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 31.908
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 70.57
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 7.87
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 16.333
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 30.237
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 58.635
+        }
+      ]
+    },
+    {
+      "trial": 4,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 6.081
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.682
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 24.729
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 59.824
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 5.803
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.675
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 27.675
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 59.765
+        }
+      ]
+    },
+    {
+      "trial": 5,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 7.881
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 15.257
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 32.551
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 64.076
+        }
+      ]
+    },
+    {
+      "trial": 6,
+      "build": "baseline",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 7.498
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 15.108
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 30.813
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 63.142
+        }
+      ]
+    },
+    {
+      "trial": 6,
+      "build": "patched",
+      "measurements": [
+        {
+          "size": "1920x1080",
+          "format": "gray",
+          "ms": 5.552
+        },
+        {
+          "size": "1920x1080",
+          "format": "yuv420p",
+          "ms": 14.089
+        },
+        {
+          "size": "3840x2160",
+          "format": "gray",
+          "ms": 24.965
+        },
+        {
+          "size": "3840x2160",
+          "format": "yuv420p",
+          "ms": 61.728
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "size": "1920x1080",
+      "format": "gray",
+      "median_ms": {
+        "baseline": 7.498,
+        "patched": 5.707
+      },
+      "time_reduction_percent": 23.886369698586297,
+      "samples": {
+        "baseline": [
+          7.014,
+          6.767,
+          6.846,
+          7.892,
+          7.87,
+          7.881,
+          7.498
+        ],
+        "patched": [
+          5.191,
+          8.293,
+          5.679,
+          5.707,
+          6.081,
+          5.803,
+          5.552
+        ]
+      }
+    },
+    {
+      "size": "1920x1080",
+      "format": "yuv420p",
+      "median_ms": {
+        "baseline": 15.108,
+        "patched": 14.426
+      },
+      "time_reduction_percent": 4.514164680963728,
+      "samples": {
+        "baseline": [
+          14.646,
+          14.088,
+          14.02,
+          15.55,
+          16.333,
+          15.257,
+          15.108
+        ],
+        "patched": [
+          14.426,
+          15.863,
+          14.167,
+          13.679,
+          14.682,
+          14.675,
+          14.089
+        ]
+      }
+    },
+    {
+      "size": "3840x2160",
+      "format": "gray",
+      "median_ms": {
+        "baseline": 30.813,
+        "patched": 24.729
+      },
+      "time_reduction_percent": 19.744912861454576,
+      "samples": {
+        "baseline": [
+          30.111,
+          29.041,
+          35.671,
+          31.908,
+          30.237,
+          32.551,
+          30.813
+        ],
+        "patched": [
+          23.816,
+          25.42,
+          24.395,
+          24.269,
+          24.729,
+          27.675,
+          24.965
+        ]
+      }
+    },
+    {
+      "size": "3840x2160",
+      "format": "yuv420p",
+      "median_ms": {
+        "baseline": 58.635,
+        "patched": 59.765
+      },
+      "time_reduction_percent": -1.9271766010062308,
+      "samples": {
+        "baseline": [
+          57.724,
+          56.641,
+          57.374,
+          70.57,
+          58.635,
+          64.076,
+          63.142
+        ],
+        "patched": [
+          57.378,
+          62.841,
+          58.286,
+          58.206,
+          59.824,
+          59.765,
+          61.728
+        ]
+      }
+    }
+  ]
+}
