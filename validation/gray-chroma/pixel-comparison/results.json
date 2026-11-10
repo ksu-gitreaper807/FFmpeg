@@ -1,0 +1,20 @@
+{
+  "conversion": "RGB0 -> GRAY8, 512x320, BT.709, full range, bilinear",
+  "pixels_compared": 163840,
+  "differing_pixels": 0,
+  "maximum_absolute_pixel_difference": 0,
+  "unchanged_sha256_active_pixels": "8701eeb67e06f4967b5639236aaf54af643a8002960999e2bed33d3d425964c4",
+  "patched_sha256_active_pixels": "8701eeb67e06f4967b5639236aaf54af643a8002960999e2bed33d3d425964c4",
+  "unchanged": {
+    "width": 512,
+    "height": 320,
+    "output_rows": 320,
+    "uv_converter_calls": 320
+  },
+  "patched": {
+    "width": 512,
+    "height": 320,
+    "output_rows": 320,
+    "uv_converter_calls": 0
+  }
+}

@@ -87,5 +87,30 @@ were collected on the phone or in QEMU.
 runner's working directory. Adjust CPU affinity for the target machine. Full
 individual measurements are in `results/benchmark-x86.json`.
 
+## Visual example and 512x320 timing
+
+A separate [RGB0-to-GRAY8 example](pixel-comparison/README.md) includes the
+input image, actual output from both builds, raw output files, diagnostic
+sources and every timing sample. All 163,840 output pixels matched exactly;
+the untimed probe counted 320 input U/V converter calls before the patch and
+zero after it.
+
+For this exact image, an uninstrumented conversion-only benchmark measured
+median times of **0.338 ms/frame unchanged** and **0.247 ms/frame patched**:
+**27.0% less time**, equivalent to **37.1% higher throughput**. This uses full
+output range, unlike the earlier limited-range 1080p/4K measurements above.
+Nine alternating pairs each used 500 warmup conversions and 4,800 timed
+conversions per build, pinned to CPU 2 on the same i7-12800H.
+
+The same input buffer was reused in memory. Setup, allocation and file I/O
+were excluded; outputs matched after every sample. Existing power settings
+were retained and CPU frequency was not fixed. Individual paired time
+reductions ranged from 20.8% to 42.0%; the figure is a local conversion
+measurement, not an end-to-end video speedup or a cross-platform estimate.
+
+See the [comparison graphic](pixel-comparison/comparison.png),
+[raw measurements](pixel-comparison/benchmark-results.json) and
+[reproduction instructions](pixel-comparison/README.md#reproduce-on-x86-linux).
+
 The standalone diagnostic sources in this directory are provided under
 LGPL-2.1-or-later, consistent with the FFmpeg library code being exercised.

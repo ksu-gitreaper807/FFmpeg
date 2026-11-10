@@ -1,0 +1,294 @@
+{
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12800H",
+  "affinity_cpu": 2,
+  "method": "9 alternating paired runs; 500 warmup conversions per process; fixed iterations per sample; single thread; native CPU dispatch; repeated same in-memory input; only sws_scale timed; no callback instrumentation; allocation, setup, file I/O and output checking excluded",
+  "conversion": "RGB0 -> GRAY8; 512x320; BT.709; full source/destination range; SWS_BILINEAR",
+  "iterations_per_sample": 2400,
+  "source_rgb0_sha256": "ec97dc9bbb06b757be3ae1080ab9cf4994e09c69a11f9cae8e2fbcdcde658b38",
+  "harness_compile_flags": "cc -std=c17 -O2 -Iwork/FFmpeg [source] [paired static libraries] -lm -pthread",
+  "artifacts_sha256": {
+    "work/libswscale-baseline-asm.a": "d9edbeb0df0cc456b7294037ea0573ae956f36a61bacd9f98cc4e9d21f2339f8",
+    "work/libavutil-baseline-asm.a": "cb687146fff158782ec6f81e9d7b5c0830e01a21408585f2b3b90564e06cc7e1",
+    "work/FFmpeg/libswscale/libswscale.a": "e2c1ec581312bf72ccdbdd7191fd6419a915e2ed907a7125da27fe86bbd6be9d",
+    "work/FFmpeg/libavutil/libavutil.a": "5873b5b292a5aed7967bbe334fe9b232e7d4deff3660ffd04f9b39dbbff8d512",
+    "outputs/pixel-comparison/benchmark.c": "42591488b853c499800230ecb2aced320a725770f94a679c5633624eb284c3d9"
+  },
+  "pilots": {
+    "unchanged": {
+      "iterations": 500,
+      "warmup": 500,
+      "elapsed_us": 191401,
+      "us_per_frame": 382.802,
+      "cpu_flags": 5231579,
+      "output_fnv1a64": "8eadd89f21cd6a04"
+    },
+    "patched": {
+      "iterations": 500,
+      "warmup": 500,
+      "elapsed_us": 129315,
+      "us_per_frame": 258.63,
+      "cpu_flags": 5231579,
+      "output_fnv1a64": "8eadd89f21cd6a04"
+    }
+  },
+  "samples": [
+    {
+      "trial": 1,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 971097,
+          "us_per_frame": 404.62375,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 570567,
+          "us_per_frame": 237.73625,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 41.245107337372055
+    },
+    {
+      "trial": 2,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 583241,
+          "us_per_frame": 243.017083333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 762335,
+          "us_per_frame": 317.639583333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 23.49282139744181
+    },
+    {
+      "trial": 3,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 807246,
+          "us_per_frame": 336.3525,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 627754,
+          "us_per_frame": 261.564166667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 22.235105531548005
+    },
+    {
+      "trial": 4,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 546311,
+          "us_per_frame": 227.629583333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 760093,
+          "us_per_frame": 316.705416667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 28.125768820575246
+    },
+    {
+      "trial": 5,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 831900,
+          "us_per_frame": 346.625,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 607084,
+          "us_per_frame": 252.951666667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 27.02440197129462
+    },
+    {
+      "trial": 6,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 612115,
+          "us_per_frame": 255.047916667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 839796,
+          "us_per_frame": 349.915,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 27.111465165254423
+    },
+    {
+      "trial": 7,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 786171,
+          "us_per_frame": 327.57125,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 573875,
+          "us_per_frame": 239.114583333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 27.00379434001
+    },
+    {
+      "trial": 8,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 917910,
+          "us_per_frame": 382.4625,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 873174,
+          "us_per_frame": 363.8225,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": -5.123377471156942
+    },
+    {
+      "trial": 9,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 738778,
+          "us_per_frame": 307.824166667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 2400,
+          "warmup": 500,
+          "elapsed_us": 515001,
+          "us_per_frame": 214.58375,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 30.290154823310612
+    }
+  ],
+  "summary": {
+    "median_us_per_frame": {
+      "unchanged": 336.3525,
+      "patched": 243.017083333
+    },
+    "sample_range_us_per_frame": {
+      "unchanged": [
+        307.824166667,
+        404.62375
+      ],
+      "patched": [
+        214.58375,
+        382.4625
+      ]
+    },
+    "time_reduction_percent": 27.749285843571858,
+    "throughput_increase_percent": 38.40693641241053,
+    "median_paired_time_reduction_percent": 27.02440197129462,
+    "paired_time_reduction_range_percent": [
+      -5.123377471156942,
+      41.245107337372055
+    ],
+    "all_outputs_equal_to_displayed_example": true
+  }
+}

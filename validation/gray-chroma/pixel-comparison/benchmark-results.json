@@ -1,0 +1,297 @@
+{
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12800H",
+  "affinity_cpu": 2,
+  "cpu_governor": "powersave",
+  "energy_performance_preference": "power",
+  "frequency_and_other_system_work": "Existing power settings retained; frequency not fixed; CPU affinity is not exclusive CPU reservation",
+  "method": "9 alternating paired runs; 500 warmup conversions per process; fixed iterations per sample; single thread; native CPU dispatch; repeated same in-memory input; only sws_scale timed; no callback instrumentation; allocation, setup, file I/O and output checking excluded",
+  "conversion": "RGB0 -> GRAY8; 512x320; BT.709; full source/destination range; SWS_BILINEAR",
+  "iterations_per_sample": 4800,
+  "source_rgb0_sha256": "ec97dc9bbb06b757be3ae1080ab9cf4994e09c69a11f9cae8e2fbcdcde658b38",
+  "harness_compile_flags": "cc -std=c17 -O2 -Iwork/FFmpeg [source] [paired static libraries] -lm -pthread",
+  "artifacts_sha256": {
+    "work/libswscale-baseline-asm.a": "d9edbeb0df0cc456b7294037ea0573ae956f36a61bacd9f98cc4e9d21f2339f8",
+    "work/libavutil-baseline-asm.a": "cb687146fff158782ec6f81e9d7b5c0830e01a21408585f2b3b90564e06cc7e1",
+    "work/FFmpeg/libswscale/libswscale.a": "e2c1ec581312bf72ccdbdd7191fd6419a915e2ed907a7125da27fe86bbd6be9d",
+    "work/FFmpeg/libavutil/libavutil.a": "5873b5b292a5aed7967bbe334fe9b232e7d4deff3660ffd04f9b39dbbff8d512",
+    "outputs/pixel-comparison/benchmark.c": "42591488b853c499800230ecb2aced320a725770f94a679c5633624eb284c3d9"
+  },
+  "pilots": {
+    "unchanged": {
+      "iterations": 500,
+      "warmup": 500,
+      "elapsed_us": 230345,
+      "us_per_frame": 460.69,
+      "cpu_flags": 5231579,
+      "output_fnv1a64": "8eadd89f21cd6a04"
+    },
+    "patched": {
+      "iterations": 500,
+      "warmup": 500,
+      "elapsed_us": 209558,
+      "us_per_frame": 419.116,
+      "cpu_flags": 5231579,
+      "output_fnv1a64": "8eadd89f21cd6a04"
+    }
+  },
+  "samples": [
+    {
+      "trial": 1,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 2167580,
+          "us_per_frame": 451.579166667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1257894,
+          "us_per_frame": 262.06125,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 41.96781664348853
+    },
+    {
+      "trial": 2,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1191788,
+          "us_per_frame": 248.289166667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1623691,
+          "us_per_frame": 338.268958333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 26.60007353598841
+    },
+    {
+      "trial": 3,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1811608,
+          "us_per_frame": 377.418333333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1184730,
+          "us_per_frame": 246.81875,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 34.60340206043215
+    },
+    {
+      "trial": 4,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1153678,
+          "us_per_frame": 240.349583333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1707411,
+          "us_per_frame": 355.710625,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 32.431148680757005
+    },
+    {
+      "trial": 5,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1617111,
+          "us_per_frame": 336.898125,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1158170,
+          "us_per_frame": 241.285416667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 28.38030289809419
+    },
+    {
+      "trial": 6,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1104293,
+          "us_per_frame": 230.061041667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1531284,
+          "us_per_frame": 319.0175,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 27.884507380629586
+    },
+    {
+      "trial": 7,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1673812,
+          "us_per_frame": 348.710833333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1326331,
+          "us_per_frame": 276.318958333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 20.759858335364545
+    },
+    {
+      "trial": 8,
+      "order": [
+        "patched",
+        "unchanged"
+      ],
+      "measurements": {
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1181163,
+          "us_per_frame": 246.075625,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1538869,
+          "us_per_frame": 320.597708333,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 23.244733632217685
+    },
+    {
+      "trial": 9,
+      "order": [
+        "unchanged",
+        "patched"
+      ],
+      "measurements": {
+        "unchanged": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1598639,
+          "us_per_frame": 333.049791667,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        },
+        "patched": {
+          "iterations": 4800,
+          "warmup": 500,
+          "elapsed_us": 1242933,
+          "us_per_frame": 258.944375,
+          "cpu_flags": 5231579,
+          "output_fnv1a64": "8eadd89f21cd6a04"
+        }
+      },
+      "time_reduction_percent": 22.250551875767087
+    }
+  ],
+  "summary": {
+    "median_us_per_frame": {
+      "unchanged": 338.268958333,
+      "patched": 246.81875
+    },
+    "sample_range_us_per_frame": {
+      "unchanged": [
+        319.0175,
+        451.579166667
+      ],
+      "patched": [
+        230.061041667,
+        276.318958333
+      ]
+    },
+    "time_reduction_percent": 27.034762156028002,
+    "throughput_increase_percent": 37.05156449135247,
+    "median_paired_time_reduction_percent": 27.884507380629586,
+    "paired_time_reduction_range_percent": [
+      20.759858335364545,
+      41.96781664348853
+    ],
+    "all_outputs_equal_to_displayed_example": true
+  }
+}
